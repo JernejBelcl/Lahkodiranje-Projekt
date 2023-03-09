@@ -1,0 +1,9 @@
+# Na repozitorij ne bomo nalagali mape z nameščenimi odvisnostmi (dependencies)
+/node_modules
+# Iz repozitorija odstranimo tudi cache datoteko npmja
+.npm
+# Iz repozitorija izključimo tudi spremenljivke okolja
+.env
+biometricauth/trainfaces/
+biometricauth/uploads/
+biometricauth/featuresmodels/
