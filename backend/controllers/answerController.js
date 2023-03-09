@@ -17,46 +17,7 @@ module.exports = {
         });
     },
 
-    listCplusPlus: function (req, res) {
-        var id = req.params.id;
-        answerModel.find({questionID: id},function (err, answers) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when getting answer.',
-                    error: err
-                });
-            }
-            if (!answers) {
-                return res.status(404).json({
-                    message: 'No such answer'
-                });
-            }
-            return res.json(answers);
-        });
-    },
-
-    showCplusPlusCorrect: function (req, res) {
-        var id = req.params.id;
-        var tempCorrect = true;
-        answerModel.findOne({questionID: id,correct: tempCorrect}, function (err, answer) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when getting answer.',
-                    error: err
-                });
-            }
-
-            if (!answer) {
-                return res.status(404).json({
-                    message: 'No such answer'
-                });
-            }
-
-            return res.json(answer);
-        });
-    },
-
-
+ 
     show: function (req, res) {
         var id = req.params.id;
 

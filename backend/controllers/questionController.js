@@ -17,11 +17,8 @@ module.exports = {
         });
     },
 
-    listCplusPlusEasyShort: function (req, res) {
-        var diff="Easy";
-        var lang="C++";
-        var types="Short";
-        questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
+    listHtml: function (req, res) {
+        questionModel.find({language: "html"}, function (err, questions) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting question.',
@@ -32,11 +29,9 @@ module.exports = {
             return res.json(questions);
         });
     },
-    listCplusPlusMediumShort: function (req, res) {
-        var diff="Medium";
-        var lang="C++";
-        var types="Short";
-        questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
+
+    listCss: function (req, res) {
+        questionModel.find({language: "css"}, function (err, questions) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting question.',
@@ -44,71 +39,13 @@ module.exports = {
                 });
             }
 
-            return res.json(questions);
+            //return res.json(questions);
+            
+            return res.render("css", { title: 'Express'})
         });
     },
-    listCplusPlusHardShort: function (req, res) {
-        var diff="Hard";
-        var lang="C++";
-        var types="Short";
-        questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when getting question.',
-                    error: err
-                });
-            }
 
-            return res.json(questions);
-        });
-    },
  
-    listCplusPlusEasyChoice: function (req, res) {
-        var diff="Easy";
-        var lang="C++";
-        var types="Choice";
-        questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when getting question.',
-                    error: err
-                });
-            }
-
-            return res.json(questions);
-        });
-    },
-    listCplusPlusMediumChoice: function (req, res) {
-        var diff="Medium";
-        var lang="C++";
-        var types="Choice";
-        questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when getting question.',
-                    error: err
-                });
-            }
-
-            return res.json(questions);
-        });
-    },
-    listCplusPlusHardChoice: function (req, res) {
-        var diff="Hard";
-        var lang="C++";
-        var types="Choice";
-        questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when getting question.',
-                    error: err
-                });
-            }
-
-            return res.json(questions);
-        });
-    },
-
     show: function (req, res) {
         var id = req.params.id;
 

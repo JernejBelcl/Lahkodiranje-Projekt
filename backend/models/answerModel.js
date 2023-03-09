@@ -7,7 +7,7 @@ var answerSchema  = new Schema({
 	 	ref: 'question'
 	},
 	'content' : String,
-	'correct' : Boolean,
+	'correct' : String,
 });
 
 module.exports = mongoose.model('answer', answerSchema);

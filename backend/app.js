@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var mongoose = require("mongoose");
-var mongoDB = "mongodb://127.0.0.1/projekt";
+var mongoDB = "mongodb://zlahtic:projekt@83.212.82.61:42957/projekt?authSource=admin";
 //var mongoDB = "mongodb://localhost:27017";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -44,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var session = require('express-session');
 var MongoStore = require('connect-mongo');
+const answerController = require('./controllers/answerController');
 app.use(session({
   secret: 'amigos',
   resave: true,
@@ -54,6 +55,8 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/question', questionRouter);
 app.use('/answer', answerRouter);
+
+
 
 
 
