@@ -17,7 +17,7 @@ export const Nav = styled.nav`
 `
 
 export const NavLink =  styled(Link)`
-    color: #fff;
+    color: #00ff00;
     align-items: center;
     text-decoration: none;
     height: 100%;
@@ -115,7 +115,7 @@ export const NavExtended = styled.div`
 
 `
 export const NavBarLink =  styled(Link)`
-    color: #fff;
+    color: #00ff00;
     align-items: center;
     text-decoration: none;
     margin: 20px;
@@ -125,7 +125,7 @@ export const NavBarLink =  styled(Link)`
     transition: 0.2s ease-in-out;
     
     &.active {
-        color: #15cdfc;
+        color: #00ff00;
         
     }
     &:hover {
@@ -133,10 +133,11 @@ export const NavBarLink =  styled(Link)`
         transition: 0.2s ease-in-out;
     }
 `
-
+/*00ff00, fff , 15cdfc*/
 export const NavLogoLink =  styled(Link)`
     color: #fff;
     align-items: center;
+    
     text-decoration: none;
     margin: 20px;
     display: ${(props) => (props.extendNavBar ? "none" : "flex")};
@@ -149,7 +150,8 @@ export const NavLogoLink =  styled(Link)`
         display: flex;
     }
     &.active {
-        color: #15cdfc;
+    
+        color: #00ff00;
     }
     &:hover {
         color: #15cdfc;

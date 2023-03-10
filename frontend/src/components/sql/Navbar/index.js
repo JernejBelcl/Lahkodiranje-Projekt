@@ -28,8 +28,8 @@ const Navbar = () => {
     return (
         <>
             <Nav extendNavBar={click}>
-                <NavLogoLink to="/" extendNavBar={click}>
-                    <h1>LOGO</h1>
+                <NavLogoLink to="/sql" extendNavBar={click}>
+                    SQL
                 </NavLogoLink>
                 <Bars onClick={handleClick}/>
                 <NavMenu extendNavBar={click}>

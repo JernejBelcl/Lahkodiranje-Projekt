@@ -7,7 +7,7 @@ const Home = () => {
 
         <div style={{
             display: "flex",
-            height: '90vh'
+            height: '100vh'
         }}>
 
             <>
