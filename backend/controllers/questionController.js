@@ -41,7 +41,7 @@ module.exports = {
 
             //return res.json(questions);
             
-            return res.render("css", { title: 'Express'})
+            return res.render("css", { title: 'CSS'})
         });
     },
 
