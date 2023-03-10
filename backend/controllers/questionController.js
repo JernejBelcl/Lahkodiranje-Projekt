@@ -17,9 +17,9 @@ module.exports = {
         });
     },
 
-    listCplusPlusEasyShort: function (req, res) {
+    listSqlEasyShort: function (req, res) {
         var diff="Easy";
-        var lang="C++";
+        var lang="SQL";
         var types="Short";
         questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
             if (err) {
@@ -32,9 +32,9 @@ module.exports = {
             return res.json(questions);
         });
     },
-    listCplusPlusMediumShort: function (req, res) {
+    listSqlMediumShort: function (req, res) {
         var diff="Medium";
-        var lang="C++";
+        var lang="SQL";
         var types="Short";
         questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
             if (err) {
@@ -47,9 +47,9 @@ module.exports = {
             return res.json(questions);
         });
     },
-    listCplusPlusHardShort: function (req, res) {
+    listSqlHardShort: function (req, res) {
         var diff="Hard";
-        var lang="C++";
+        var lang="SQL";
         var types="Short";
         questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
             if (err) {
@@ -63,9 +63,9 @@ module.exports = {
         });
     },
  
-    listCplusPlusEasyChoice: function (req, res) {
+    listSqlEasyChoice: function (req, res) {
         var diff="Easy";
-        var lang="C++";
+        var lang="SQL";
         var types="Choice";
         questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
             if (err) {
@@ -78,9 +78,9 @@ module.exports = {
             return res.json(questions);
         });
     },
-    listCplusPlusMediumChoice: function (req, res) {
+    listSqlMediumChoice: function (req, res) {
         var diff="Medium";
-        var lang="C++";
+        var lang="SQL";
         var types="Choice";
         questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
             if (err) {
@@ -93,9 +93,9 @@ module.exports = {
             return res.json(questions);
         });
     },
-    listCplusPlusHardChoice: function (req, res) {
+    listSqlHardChoice: function (req, res) {
         var diff="Hard";
-        var lang="C++";
+        var lang="SQL";
         var types="Choice";
         questionModel.find({difficulty: diff,language:lang,type:types},function (err, questions) {
             if (err) {

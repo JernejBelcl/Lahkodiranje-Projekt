@@ -17,7 +17,7 @@ module.exports = {
         });
     },
 
-    listCplusPlus: function (req, res) {
+    listSql: function (req, res) {
         var id = req.params.id;
         answerModel.find({questionID: id},function (err, answers) {
             if (err) {
@@ -35,7 +35,7 @@ module.exports = {
         });
     },
 
-    showCplusPlusCorrect: function (req, res) {
+    showSqlCorrect: function (req, res) {
         var id = req.params.id;
         var tempCorrect = true;
         answerModel.findOne({questionID: id,correct: tempCorrect}, function (err, answer) {
