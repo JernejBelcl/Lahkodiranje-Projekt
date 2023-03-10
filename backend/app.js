@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var mongoose = require("mongoose");
-var mongoDB = "mongodb://127.0.0.1/projekt";
+var mongoDB = "mongodb://zlahtic:projekt@83.212.82.61:42957/projekt?authSource=admin";
 //var mongoDB = "mongodb://localhost:27017";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;

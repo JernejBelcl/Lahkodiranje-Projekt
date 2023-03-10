@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-function Home() {
+function cPlusPlusHomepage() {
     return (
         <div>
         
@@ -12,4 +12,4 @@ function Home() {
         </div>
     );
 }
-export default Home;
+export default cPlusPlusHomepage;
