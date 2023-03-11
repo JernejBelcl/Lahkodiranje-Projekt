@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+#root{ min-height: 100vh; margin:0; }
+
+header{ min-height:50px; }
+footer{ min-height:50px; }
+
+/* The article fills all the space between header & footer */
+#root{ display:flex; flex-direction:column; }
+main{ flex:1; }
+
+.Naslov{font-size: 30px; margin-bottom: 30px;}
