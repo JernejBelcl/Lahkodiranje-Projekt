@@ -8,11 +8,23 @@ import PythonHome from "./components/python/PythonHome";
 import PythonEasy from "./components/python/PythonEasy";
 import PythonMedium from "./components/python/PythonMedium";
 import PythonHard from "./components/python/PythonHard";
-import HomeSQL from "./components/sql/HomeSql"
+import HomeSQL from "./components/sql/HomeSql";
 import CssHomepage from "./components/css/cssHomepage";
 import CssEasyHomepage from "./components/css/cssEasy/cssEasyHomepage";
 import CssNormalHomepage from "./components/css/cssNormal/cssNormalHomepage";
 import CssHardHomepage from "./components/css/cssHard/cssHardHomepage";
+import CssEasyCourse from "./components/css/cssEasy/cssEasyCourse";
+import CssEasyQuestions from "./components/css/cssEasy/cssEasyQuestions";
+import CssNormalCourse from "./components/css/cssNormal/cssNormalCourse";
+import CssNormalQuestions from "./components/css/cssNormal/cssNormalQuestions";
+import CssHardCourse from "./components/css/cssHard/cssHardCourse";
+import CssHardQuestions from "./components/css/cssHard/cssHardQuestions";
+import HtmlEasyCourse from "./components/html/htmlEasy/htmlEasyCourse";
+import HtmlEasyQuestions from "./components/html/htmlEasy/htmlEasyQuestions";
+import HtmlNormalCourse from "./components/html/htmlNormal/htmlNormalCourse";
+import HtmlNormalQuestions from "./components/html/htmlNormal/htmlNormalQuestions";
+import HtmlHardCourse from "./components/html/htmlHard/htmlHardCourse";
+import HtmlHardQuestions from "./components/html/htmlHard/htmlHardQuestions";
 import HtmlHomepage from "./components/html/htmlHomepage";
 import HtmlEasyHomepage from "./components/html/htmlEasy/htmlEasyHomepage";
 import HtmlNormalHomepage from "./components/html/htmlNormal/htmlNormalHomepage";
@@ -57,9 +69,22 @@ export const routes = [
     {name: "CSSEasy", to: "/CSS/Easy", visible: false, element: <CssEasyHomepage/>},
     {name: "CSSNormal", to: "/CSS/Normal", visible: false, element: <CssNormalHomepage/>},
     {name: "CSSHard", to: "/CSS/Hard", visible: false, element: <CssHardHomepage/>},
+    {name: "CSSEasyCourse", to: "/CSS/EasyCourse", visible: false, element: <CssEasyCourse/>},
+    {name: "CSSEasyQuestions", to: "/CSS/EasyQuestions", visible: false, element: <CssEasyQuestions/>},
+    {name: "CSSNormalCourse", to: "/CSS/NormalCourse", visible: false, element: <CssNormalCourse/>},
+    {name: "CSSNormalQuestions", to: "/CSS/NormalQuestions", visible: false, element: <CssNormalQuestions/>},
+    {name: "CSSHardCourse", to: "/CSS/HardCourse", visible: false, element: <CssHardCourse/>},
+    {name: "CSSHardQuestions", to: "/CSS/HardQuestions", visible: false, element: <CssHardQuestions/>},
+
     {name: "HTML", to: "/html", visible: true, element: <HtmlHomepage/>},
     {name: "HTMLEasy", to: "/html/Easy", visible: false, element: <HtmlEasyHomepage/>},
     {name: "HTMLNormal", to: "/html/Normal", visible: false, element: <HtmlNormalHomepage/>},
     {name: "HTMLHard", to: "/html/Hard", visible: false, element: <HtmlHardHomepage/>},
-
+    {name: "HTMLEasyCourse", to: "/html/EasyCourse", visible: false, element: <HtmlEasyCourse/>},
+    {name: "HTMLEasyQuestions", to: "/html/EasyQuestions", visible: false, element: <HtmlEasyQuestions/>},
+    {name: "HTMLNormalCourse", to: "/html/NormalCourse", visible: false, element: <HtmlNormalCourse/>},
+    {name: "HTMLNormalQuestions", to: "/html/NormalQuestions", visible: false, element: <HtmlNormalQuestions/>},
+    {name: "HTMLHardCourse", to: "/html/HardCourse", visible: false, element: <HtmlHardCourse/>},
+    {name: "HTMLHardQuestions", to: "/html/HardQuestions", visible: false, element: <HtmlHardQuestions/>},
+    //{name: "SQL", to: "/SQL", visible: true, element: <div>SQL</div>}
 ]
