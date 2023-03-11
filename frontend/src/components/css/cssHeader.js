@@ -19,13 +19,13 @@ function cssHeader(props) {
                                                 <Link className="nav-link link-info" to='/css'>CSS</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/races'>Enostavno</Link>
+                                                <Link className="nav-link link-info" to='/css/Easy'>Enostavno</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/races'>Srednje</Link>
+                                                <Link className="nav-link link-info" to='/css/Normal'>Srednje</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/races'>Težavno</Link>
+                                                <Link className="nav-link link-info" to='/css/Hard'>Težavno</Link>
                                             </li>
                                         </ul>                                                              
                     </div>

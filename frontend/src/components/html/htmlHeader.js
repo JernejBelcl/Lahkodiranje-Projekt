@@ -16,16 +16,16 @@ function htmlHeader(props) {
                         
                                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/html'>HTML</Link>
+                                                <Link className="nav-link link-info" to='/html'>HTML</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/html/EasyHomepage'>Enostavno</Link>
+                                                <Link className="nav-link link-info" to='/html/Easy'>Enostavno</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/races'>Srednje</Link>
+                                                <Link className="nav-link link-info" to='/html/Normal'>Srednje</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/races'>Težavno</Link>
+                                                <Link className="nav-link link-info" to='/html/Hard'>Težavno</Link>
                                             </li>
                                         </ul>                                                              
                     </div>

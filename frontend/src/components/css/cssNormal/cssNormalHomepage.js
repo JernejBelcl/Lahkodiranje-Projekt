@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
-import Header from "../htmlHeader";
+import Header from "../cssHeader";
 
-function HtmlHardHomepage() {
+function CssNormalHomepage() {
     return (
         <div>
-        <Header title="HTML Course"></Header>
+        <Header title="CSS Course"></Header>
         <div className="container h-50 justify-content-center mt-5 text-color-secondary" style={{ width: "100%" }}>
         <div className="jumbotron my-auto">
-        <h1 class="display-2">HTML-Težavni tečaj</h1>
+        <h1 class="display-2">CSS-Srednji tečaj</h1>
         </div>
         <br></br>
 
         <hr></hr>
         <div className="text-center mt-5">
-        <Link to='/html/HardCourse'>
+        <Link to='/css/NormalCourse'>
         <button type="button" class="btn btn-success btn-lg">Tečaj</button>&nbsp;&nbsp;
         </Link>
-        <Link to='/html/HardQuestions'>
+        <Link to='/css/NormalQuestions'>
         <button type="button" class="btn btn-danger btn-lg">Vprašanja</button>
         </Link>
         </div>
@@ -24,7 +24,7 @@ function HtmlHardHomepage() {
         <hr></hr>
 
         <div className="text-center mt-5">
-        <img src="/htmlSlika.png" alt="asd" className="container w-50 center" />
+        <img src="/cssSlika.png" alt="asd" className="container w-50 center" />
         </div>
 
 
@@ -35,4 +35,4 @@ function HtmlHardHomepage() {
     );
 
 }
-export default HtmlHardHomepage;
+export default CssNormalHomepage;

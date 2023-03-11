@@ -4,17 +4,20 @@ import { Link } from "react-router-dom";
 function HtmlHomepage() {
     return (
         <div>
-        <Header title="HTML Course"></Header>
+        
         <hr></hr> 
         <div class="d-inline p-2 text-green"><b>Vas mogoče bolje zanima CSS?</b></div><span>
         <Link to='/css'>
         <button type="button" class="btn btn-success btn-sm">CSS-Tečaj</button></Link> </span>
-        <hr></hr> 
+        <hr></hr><br></br>
+        <Header title="HTML Course"></Header> 
+        <br></br>
         <div className="container h-50 justify-content-center mt-5 text-color-secondary" style={{ width: "100%" }}>
         <div className="jumbotron my-auto">
         <h1 class="display-2">Kaj je HTML?</h1>
         </div>
         <br></br>
+        
         
         <div class="card " > 
         <p class="card-body">
