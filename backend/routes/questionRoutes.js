@@ -15,8 +15,11 @@ router.get('/postQuestion', questionController.postQuestion);
  */
 router.get('/:id', questionController.show);
 
-router.get('/q/:language/:difficulty', questionController.getQuestions);
-router.get('/q/:language', questionController.getAllQuestionsFromLanguage);
+router.get('/sql/:difficulty/:id/answers', questionController.getAnswersByQuestionId);
+router.get('/sql/:difficulty/:id/splitted', questionController.getSqlSplittedQuestionById);
+
+router.get('/:language/:difficulty', questionController.getQuestions);
+router.get('/:language', questionController.getAllQuestionsFromLanguage);
 
 
 router.get('/:id/:answer', questionController.checkIfAnswerCorrect);
