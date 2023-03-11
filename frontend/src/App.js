@@ -3,16 +3,17 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {useState} from "react";
 import {UserContext} from "./userContext";
 import Home from "./components/Home";
-<<<<<<< Updated upstream
 
 
-=======
 import HomeCplusPlus from "./components/cPlusPlus/cPlusPlusHomepage";
 import HomeCplusPlusEasy from "./components/cPlusPlus/cPlusPlusEasy";
 import HomeCplusPlusMedium from "./components/cPlusPlus/cPlusPlusMedium";
 import HomeCplusPlusHard from "./components/cPlusPlus/cPlusPlusHard";
 import HtmlHomepage from "./components/html/htmlHomepage";
->>>>>>> Stashed changes
+import CssHomepage from "./components/css/cssHomepage";
+import HtmlEasyHomepage from "./components/html/htmlEasy/htmlEasyHomepage";
+import HtmlEasyCourse from "./components/html/htmlEasy/htmlEasyCourse";
+import HtmlEasyQuestions from "./components/html/htmlEasy/htmlEasyQuestions";
 function App() {
 
     const [user, setUser] = useState(localStorage.user ? JSON.parse(localStorage.user) : null);
@@ -27,14 +28,15 @@ function App() {
                     
                     <Routes>  
                         <Route path={"/"} exact element={<Home/>}></Route>
-<<<<<<< Updated upstream
-=======
                         <Route path={"/cPlusPlus"} exact element={<HomeCplusPlus/>}></Route>
                         <Route path={"/cPlusPlus/Easy"} exact element={<HomeCplusPlusEasy/>}></Route>
                         <Route path={"/cPlusPlus/Medium"} exact element={<HomeCplusPlusMedium/>}></Route>
                         <Route path={"/cPlusPlus/Hard"} exact element={<HomeCplusPlusHard/>}></Route>
                         <Route path={"/html"} exact element={<HtmlHomepage/>}></Route>
->>>>>>> Stashed changes
+                        <Route path={"/css"} exact element={<CssHomepage/>}></Route>
+                        <Route path={"/html/EasyHomepage"} exact element={<HtmlEasyHomepage/>}></Route>
+                        <Route path={"/html/EasyCourse"} exact element={<HtmlEasyCourse/>}></Route>
+                        <Route path={"/html/EasyQuestions"} exact element={<HtmlEasyQuestions/>}></Route>
 
                     </Routes>
                 </UserContext.Provider>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function htmlHeader(props) {
+function cssHeader(props) {
 
     return (
 <header>
@@ -10,16 +10,16 @@ function htmlHeader(props) {
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse text-center" id="navbarText">
-                        {/*<Link className="navbar-brand" to='/'>{props.title}</Link>*/}
+                    <div className="collapse navbar-collapse text-center" id="navbarText">                        
+                       {/* <Link className="navbar-brand" to='/'>{props.title}</Link> */}
                         <Link className="navbar-brand" to='/'>Domov</Link>
                         
                                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/html'>HTML</Link>
+                                                <Link className="nav-link link-info" to='/css'>CSS</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to='/html/EasyHomepage'>Enostavno</Link>
+                                                <Link className="nav-link" to='/races'>Enostavno</Link>
                                             </li>
                                             <li className="nav-item">
                                                 <Link className="nav-link" to='/races'>Srednje</Link>
@@ -35,4 +35,4 @@ function htmlHeader(props) {
     );
 }
 
-export default htmlHeader;
+export default cssHeader;
