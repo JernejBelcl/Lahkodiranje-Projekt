@@ -25,6 +25,9 @@ import CSharpHard from "./components/cSharp/cSharpHard";
 
 
 
+import HomeSqlEasy from "./components/sql/HomeSqlEasy";
+import HomeSqlMedium from "./components/sql/HomeSqlMedium";
+import HomeSqlHard from "./components/sql/HomeSqlHard";
 export const routes = [
     {name: "Domov", to: "/", visible: true, element: <Home/>},
     
@@ -44,7 +47,12 @@ export const routes = [
     {name: "PythonEasy", to: "/Python/Easy", visible: false, element: <PythonEasy/>},
     {name: "PythonMedium", to: "/Python/Medium", visible: false, element: <PythonMedium/>},
     {name: "PythonHard", to: "/Python/Hard", visible: false, element: <PythonHard/>},
+
     {name: "SQL", to: "/sql", visible: true, element: <HomeSQL/>},
+    {name: "SQLEasy", to: "/sql/Easy", visible: false, element: <HomeSqlEasy/>},
+    {name: "SQLMedium", to: "/sql/Medium", visible: false, element: <HomeSqlMedium/>},
+    {name: "SQLHard", to: "/sql/Hard", visible: false, element: <HomeSqlHard/>},
+
     {name: "CSS", to: "/CSS", visible: true, element: <CssHomepage/>},
     {name: "CSSEasy", to: "/CSS/Easy", visible: false, element: <CssEasyHomepage/>},
     {name: "CSSNormal", to: "/CSS/Normal", visible: false, element: <CssNormalHomepage/>},
@@ -53,5 +61,5 @@ export const routes = [
     {name: "HTMLEasy", to: "/html/Easy", visible: false, element: <HtmlEasyHomepage/>},
     {name: "HTMLNormal", to: "/html/Normal", visible: false, element: <HtmlNormalHomepage/>},
     {name: "HTMLHard", to: "/html/Hard", visible: false, element: <HtmlHardHomepage/>},
-    //{name: "SQL", to: "/SQL", visible: true, element: <div>SQL</div>}
+
 ]
