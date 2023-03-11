@@ -3,10 +3,11 @@ import {NavLink as Link} from "react-router-dom";
 import {FaBars} from "react-icons/fa";
 
 export const Nav = styled.nav`
-    background: #000;
+    background: #fff;
     height: ${(props) => (props.extendNavBar ? "100vh" : "80px")};
     display: flex;
-    justify-content: space-between;
+    
+    justify-content: center;
     padding: 0.5rem calc((100vw - 1000px) / 2);
     z-index: 10;
     position: sticky;
@@ -17,7 +18,7 @@ export const Nav = styled.nav`
 `
 
 export const NavLink =  styled(Link)`
-    color: #00ff00;
+    color: #15cdfc;
     align-items: center;
     text-decoration: none;
     height: 100%;
@@ -27,11 +28,11 @@ export const NavLink =  styled(Link)`
     transition: 0.2s ease-in-out;
     
     &.active {
-        color: #15cdfc;
-        border-bottom: 3px solid #15cdfc;
+        color: #00008B;
+        border-bottom: 3px solid #00008B;
     }
     &:hover {
-        color: #15cdfc;
+        color: #00008B;
         transition: 0.2s ease-in-out;
     }
 `
@@ -48,6 +49,7 @@ export const Bars =  styled(FaBars)`
         transform: translate(-100%, 75%);
         font-size: 1.8rem;
         cursor: pointer;
+        color: #000000;
     }
 `
 export const NavMenu = styled.div`
@@ -115,7 +117,7 @@ export const NavExtended = styled.div`
 
 `
 export const NavBarLink =  styled(Link)`
-    color: #00ff00;
+    color: #15cdfc;
     align-items: center;
     text-decoration: none;
     margin: 20px;
@@ -125,11 +127,11 @@ export const NavBarLink =  styled(Link)`
     transition: 0.2s ease-in-out;
     
     &.active {
-        color: #00ff00;
+        color: #00008B;
         
     }
     &:hover {
-        color: #15cdfc;
+        color: #00008B;
         transition: 0.2s ease-in-out;
     }
 `

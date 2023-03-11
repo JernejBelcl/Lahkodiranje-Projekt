@@ -28,9 +28,7 @@ const Navbar = () => {
     return (
         <>
             <Nav extendNavBar={click}>
-                <NavLogoLink to="/sql" extendNavBar={click}>
-                    SQL
-                </NavLogoLink>
+
                 <Bars onClick={handleClick}/>
                 <NavMenu extendNavBar={click}>
 
@@ -60,11 +58,11 @@ const Navbar = () => {
                                             Lahka stopnja
                                         </NavBarLink>
 
-                                        <NavBarLink to="/sql/Easy" onClick={handleClick} activeStyle>
+                                        <NavBarLink to="/sql/Medium" onClick={handleClick} activeStyle>
                                             Srednja stopnja
                                         </NavBarLink>
 
-                                        <NavBarLink to="/sql/Easy" onClick={handleClick} activeStyle>
+                                        <NavBarLink to="/sql/Hard" onClick={handleClick} activeStyle>
                                             Težka stopnja
                                         </NavBarLink>
 
