@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<h1>Vnos podatkov v bazo</h1>
+
+<form action="question/postQuestion" method="post" style="width:400px;">
+
+
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Content</label>
+    <input type="text" name="content" placeholder="___ is the answer." required class="form-control" />
+  </div>
+
+<div class="form-outline mb-4">
+    <label class="form-label" for="form2Example3">Answer</label>
+    <input type="text" name="answer" placeholder="here" required class="form-control" />
+  </div>
+
+ <label for="cars">Difficulty</label>
+  <select id="difficulty" name="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <label for="cars">Language:</label>
+  <select id="language" name="language" >
+    <option value="cs">C#</option>
+    <option value="cpp">C++</option>
+    <option value="htmlcss">Html/css</option>
+    <option value="sql">SQL</option>
+    <option value="python">Python</option>
+    <option value="javascript">javaScript</option>
+  </select>
+
+
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Pošlji</button>
+
+  <!-- Register buttons -->
+
+</form>
+
+
+
+<a href="question/">Vsa vprasanja</a>
+

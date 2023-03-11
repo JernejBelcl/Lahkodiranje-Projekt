@@ -1,4 +1,6 @@
 import './App.css';
+import './index.css';
+import Header from './components/Header/Header';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {useState} from "react";
 import {UserContext} from "./userContext";
@@ -11,6 +13,7 @@ import HomeJS from './components/javascript/js-home';
 import JSEasy from './components/javascript/js-easy';
 import JSMedium from './components/javascript/js-medium';
 import JSHard from './components/javascript/js-hard';
+import { routes } from './routes';
 
 function App() {
 
