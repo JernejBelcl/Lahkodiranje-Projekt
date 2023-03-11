@@ -3,7 +3,7 @@ import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 
 
 export const HomeContainer = styled.div`
-    background: #00ff00 ;
+    background: #fff ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +11,13 @@ export const HomeContainer = styled.div`
     height: 100%;
     width: 100%;
     position: relative;
+    max-width: 3xl;
+    margin-left: 445px;
     z-index: 1;
 
-    :before{
+    
+`
+/*:before{
         content: '';
         position: absolute;
         top: 0;
@@ -27,9 +31,7 @@ export const HomeContainer = styled.div`
          ),
          linear-gradient(180deg,rgba(0,0,0,0.2) 0%,transparent 100%);
          z-index: 2;
-    }
-`
-
+    }*/
 export const HomeBG = styled.div`
     position: absolute;
     top: 0;
@@ -60,10 +62,10 @@ export const HomeContent = styled.div`
 `
 
 export const HomeH1 = styled.h1`
-    color: #fff;
-    font-size: 48px;
+    color: #000000;
+    font-size: 60px;
     text-align: center;
-
+    font-weight: 600;
     @media screen and (max-width: 768px){
         font-size: 40px;
     }
@@ -71,21 +73,37 @@ export const HomeH1 = styled.h1`
     @media screen and (max-width: 480px){
         font-size: 32px;
     }
+    
+`
+export const HomeH1Blue = styled.span`
+    color: #4299E1;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+    
+    @media screen and (max-width: 768px){
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 480px){
+        font-size: 32px;
+    }
+    
 `
 
 export const HomeP = styled.p`
     margin-top: 34px;
-    color: #fff;
-    font-size: 24px;
+    color: #718096;
+    font-size: 2xl;
     text-align: center;
     max-width: 600px;
 
     @media screen and (max-width: 768px){
-        font-size: 24px;
+        font-size: 4xl;
     }
 
     @media screen and (max-width: 480px){
-        font-size: 18px;
+        font-size: 6xl;
     }
 `
 

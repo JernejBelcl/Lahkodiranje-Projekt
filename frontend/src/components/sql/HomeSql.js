@@ -1,20 +1,22 @@
 import React from "react";
 import HomeSection from "./HomeSection";
 import Navbar from "./Navbar";
+import {Helmet} from "react-helmet";
 
-const Home = () => {
+const HomeSQL = () => {
     return (
 
         <div style={{
             display: "flex",
-            height: '100vh'
+            height: '70vh'
         }}>
 
             <>
+
                 <HomeSection/>
             </>
         </div>
     )
 }
 
-export default Home
+export default HomeSQL

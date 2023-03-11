@@ -7,12 +7,14 @@ import {
     HomeH1,
     HomeP,
     HomeBtnWrapper,
+    HomeH1Blue,
     ArrowForward,
     Arrowright
 } from './HomeEle'
 import {Button} from '../ButtonEle'
 import {UserContext} from "../../../userContext";
 import Navbar from "../Navbar";
+import { Helmet } from 'react-helmet';
 
 const HomeSection = () => {
     const [hover, setHover] = useState(false)
@@ -31,11 +33,14 @@ const HomeSection = () => {
     return (
 
         <HomeContainer>
-
+            <Helmet>
+                <title>SQL kviz</title>
+            </Helmet>
             <HomeContent>
-                <HomeH1>SQL VAJE </HomeH1>
+                <HomeH1>Pozdravljeni v kvizu za <br/> <HomeH1Blue>SQL</HomeH1Blue> programiranje!</HomeH1>
+
                 <HomeP>
-                    Začni z vprašanji.
+                    Ste pripravljeni na izziv? Izberite stopnjo težavnosti in pokažite svoje dosedanje znanje ter se naučite nekaj novega!
                 </HomeP>
 
                 <HomeBtnWrapper>
@@ -43,17 +48,17 @@ const HomeSection = () => {
                                 <>
                                     <Button to="/sql/Easy" onMouseEnter={onHover} onMouseLeave={onHover} primary="true"
                                             dark="true">
-                                       Lahka vprašanja {hover ? <ArrowForward/> : <Arrowright/>}
+                                       Osnovni nivo {hover ? <ArrowForward/> : <Arrowright/>}
                                     </Button>
 
                                     <Button to="/sql/Medium" onMouseEnter={onHover1} onMouseLeave={onHover1} primary="true"
                                             dark="true">
-                                        Srednja vprašanja {hover1 ? <ArrowForward/> : <Arrowright/>}
+                                        Srednja nivo {hover1 ? <ArrowForward/> : <Arrowright/>}
                                     </Button>
 
                                     <Button to="/sql/Hard" onMouseEnter={onHover2} onMouseLeave={onHover2} primary="true"
                                             dark="true">
-                                        Težka vprašanja {hover2 ? <ArrowForward/> : <Arrowright/>}
+                                        Zahtevnejši nivo {hover2 ? <ArrowForward/> : <Arrowright/>}
                                     </Button>
                                 </>
 
