@@ -17,6 +17,67 @@ module.exports = {
         });
     },
 
+    getSqlSplittedQuestionById: function (req, res) {
+        var id = req.params.id;
+        var diff = req.params.difficulty;
+        var lang="sql";
+
+        questionModel.find({difficulty: diff,language:lang},function (err, questions) {
+            if (err) {
+                return res.status(500).json({
+                    message: 'Error when getting question.',
+                    error: err
+                });
+            }
+
+            if (questions.length == 0) {
+                return res.status(404).json({
+                    message: 'No such questions, check params'
+                });
+            }
+
+            if (parseInt(id) > questions.length - 1 || parseInt(id) < 0) {
+                return res.status(404).json({
+                    message: 'id out of range'
+                });
+            }
+
+            return res.json(questions[parseInt(id)].content.split('_'));
+        });
+    },
+
+    //za sql
+    getAnswersByQuestionId: function (req, res) {
+        var id = req.params.id;
+        var diff = req.params.difficulty;
+        var lang="sql";
+
+        questionModel.find({difficulty: diff,language:lang},function (err, questions) {
+            if (err) {
+                return res.status(500).json({
+                    message: 'Error when getting question.',
+                    error: err
+                });
+            }
+
+            if (questions.length == 0) {
+                return res.status(404).json({
+                    message: 'No such questions, check params'
+                });
+            }
+
+            if (parseInt(id) > questions.length - 1 || parseInt(id) < 0) {
+                return res.status(404).json({
+                    message: 'id out of range'
+                });
+            }
+
+            return res.json(questions[parseInt(id)].answer.split(';'));
+        });
+    },
+
+
+
     listCplusPlusEasyShort: function (req, res) {
         var diff="Easy";
         var lang="C++";
