@@ -152,8 +152,30 @@ module.exports = {
                     message: 'No such question'
                 });
             }
-
             return res.json(question);
+        });
+    },
+
+
+    checkIfAnswerCorrect: function (req, res) {
+        //var lang = req.params.language;
+        var id = req.params.id;
+        var answer = req.params.answer;
+        questionModel.find({id: id, answer: answer}, function (err, question) {
+            if (err) {
+                return res.status(500).json({
+                    message: 'Error when getting question.',
+                    error: err
+                });
+            }
+
+            console.log(question);
+            
+            if (!question || question.length == 0) {
+                return res.json("False");
+            }
+
+            return res.json("True");
         });
     },
 

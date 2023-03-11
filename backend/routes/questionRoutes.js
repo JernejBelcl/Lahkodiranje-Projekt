@@ -18,6 +18,11 @@ router.get('/:id', questionController.show);
 router.get('/q/:language/:difficulty', questionController.getQuestions);
 router.get('/q/:language', questionController.getAllQuestionsFromLanguage);
 
+
+router.get('/:id/:answer', questionController.checkIfAnswerCorrect);
+
+
+//p color:
 /*
  * POST
  */
