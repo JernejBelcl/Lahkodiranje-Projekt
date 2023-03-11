@@ -5,15 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var mongoose = require("mongoose");
-var mongoDB = "mongodb://127.0.0.1/projekt";
-//var mongoDB = "mongodb://localhost:27017";
+//var mongoDB = "mongodb://127.0.0.1/projekt";
+var mongoDB = "mongodb://localhost:27017";
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var indexRouter = require('./routes/index');
-var answerRouter = require('./routes/answerRoutes');
 var questionRouter = require('./routes/questionRoutes');
 var app = express();
 
@@ -53,7 +52,6 @@ app.use(session({
 
 app.use('/', indexRouter);
 app.use('/question', questionRouter);
-app.use('/answer', answerRouter);
 
 
 

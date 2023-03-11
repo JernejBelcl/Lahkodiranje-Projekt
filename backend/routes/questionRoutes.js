@@ -6,23 +6,24 @@ var questionController = require('../controllers/questionController.js');
  * GET
  */
 router.get('/', questionController.list);
-router.get('/cPlusPlus/Easy/Short', questionController.listCplusPlusEasyShort);
-router.get('/cPlusPlus/Medium/Short', questionController.listCplusPlusMediumShort);
-router.get('/cPlusPlus/Hard/Short', questionController.listCplusPlusHardShort);
 
-router.get('/cPlusPlus/Easy/Choice', questionController.listCplusPlusEasyChoice);
-router.get('/cPlusPlus/Medium/Choice', questionController.listCplusPlusMediumChoice);
-router.get('/cPlusPlus/Hard/Choice', questionController.listCplusPlusHardChoice);
+
+router.get('/postQuestion', questionController.postQuestion);
+
 /*
  * GET
  */
 router.get('/:id', questionController.show);
+
+router.get('/q/:language/:difficulty', questionController.getQuestions);
+router.get('/q/:language', questionController.getAllQuestionsFromLanguage);
 
 /*
  * POST
  */
 router.post('/', questionController.create);
 
+router.post('/postQuestion', questionController.create);
 /*
  * PUT
  */
