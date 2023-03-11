@@ -23,7 +23,7 @@ function PythonHome() {
                 Pozdravljeni v kvizu za <br />
                 <Text as="span">
                     <Text as="span" color="blue.400">
-                        C++
+                        Python
                         </Text>{' '}
                         programiranje!
                     </Text>
