@@ -17,6 +17,7 @@ module.exports = {
         });
     },
 
+    //function that returns json with all answers for specific c++ question with specified id
     listCplusPlus: function (req, res) {
         var id = req.params.id;
         answerModel.find({questionID: id},function (err, answers) {
@@ -34,7 +35,7 @@ module.exports = {
             return res.json(answers);
         });
     },
-
+    //function that returns json with all correct answers for specific c++ question with specified id
     showCplusPlusCorrect: function (req, res) {
         var id = req.params.id;
         var tempCorrect = true;

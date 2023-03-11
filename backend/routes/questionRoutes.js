@@ -7,10 +7,15 @@ var questionController = require('../controllers/questionController.js');
  */
 router.get('/', questionController.list);
 
+/*
+ routes to get c++ questions that are type short for all difficulties
+ */
 router.get('/cPlusPlus/Easy/Short', questionController.listCplusPlusEasyShort);
 router.get('/cPlusPlus/Medium/Short', questionController.listCplusPlusMediumShort);
 router.get('/cPlusPlus/Hard/Short', questionController.listCplusPlusHardShort);
-
+/*
+ routes to get c++ questions that are type choice for all difficulties
+ */
 router.get('/cPlusPlus/Easy/Choice', questionController.listCplusPlusEasyChoice);
 router.get('/cPlusPlus/Medium/Choice', questionController.listCplusPlusMediumChoice);
 router.get('/cPlusPlus/Hard/Choice', questionController.listCplusPlusHardChoice);

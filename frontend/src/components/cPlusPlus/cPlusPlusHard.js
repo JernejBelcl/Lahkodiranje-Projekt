@@ -13,26 +13,33 @@ import {
 } from '@chakra-ui/react'
 
 
+
+
 function Questions() {
     const [choiceQuestion, setChoiceQuestion] = useState({});
     const [shortQuestion, setShortQuestion] = useState({});
-
+// react hook to get all c++ questions from database for difficulty hard and types choice/short
     useEffect(function () {
         const getChoiceQuestions = async function () {
             const res = await fetch("http://localhost:3001/question/cPlusPlus/Hard/Choice", { credentials: "include" });
+               //wait for json data
             const data = await res.json();
+             //set variable to value of data
             setChoiceQuestion(data);
         }
         const getShortQuestions = async function () {
             const res = await fetch("http://localhost:3001/question/cPlusPlus/Hard/Short", { credentials: "include" });
+               //wait for json data
             const data = await res.json();
+             //set variable to value of data
             setShortQuestion(data);
         }
+          //call for both functions
         getChoiceQuestions();
         getShortQuestions();
     }, []);
 
-
+//check if both hook functions returned data
     if (choiceQuestion.length > 0 && shortQuestion.length > 0) {
         return (
             <>

@@ -10,8 +10,9 @@ router.get('/cPlusPlus/lahki', answerController.list);
 /*
  * GET
  */
-//router.get('/:id', answerController.show);
+//route to get all answers for specific question
 router.get('/cPlusPlus/:id', answerController.listCplusPlus);
+//route to get all correct answers for specific question
 router.get('/cPlusPlus/correct/:id', answerController.showCplusPlusCorrect);
 /*
  * POST

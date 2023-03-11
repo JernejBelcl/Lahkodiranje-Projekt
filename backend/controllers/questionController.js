@@ -77,7 +77,7 @@ module.exports = {
     },
 
 
-
+//function that returns list of questions with filters for easy difficulty, c++ language and short type
     listCplusPlusEasyShort: function (req, res) {
         var diff="Easy";
         var lang="C++";
@@ -93,6 +93,7 @@ module.exports = {
             return res.json(questions);
         });
     },
+    //function that returns list of questions with filters for medium difficulty, c++ language and short type
     listCplusPlusMediumShort: function (req, res) {
         var diff="Medium";
         var lang="C++";
@@ -108,6 +109,7 @@ module.exports = {
             return res.json(questions);
         });
     },
+    //function that returns list of questions with filters for hard difficulty, c++ language and short type
     listCplusPlusHardShort: function (req, res) {
         var diff="Hard";
         var lang="C++";
@@ -123,7 +125,7 @@ module.exports = {
             return res.json(questions);
         });
     },
- 
+ //function that returns list of questions with filters for easy difficulty, c++ language and choice type
     listCplusPlusEasyChoice: function (req, res) {
         var diff="Easy";
         var lang="C++";
@@ -139,6 +141,7 @@ module.exports = {
             return res.json(questions);
         });
     },
+    //function that returns list of questions with filters for medium difficulty, c++ language and choice type
     listCplusPlusMediumChoice: function (req, res) {
         var diff="Medium";
         var lang="C++";
@@ -154,6 +157,7 @@ module.exports = {
             return res.json(questions);
         });
     },
+    //function that returns list of questions with filters for hard difficulty, c++ language and choice type
     listCplusPlusHardChoice: function (req, res) {
         var diff="Hard";
         var lang="C++";

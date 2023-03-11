@@ -12,32 +12,28 @@ import { useId } from 'react';
 
 
 
+
+
 function CPlusPlusQuestion(props) {
     const id = useId();
-
-
-
-    const [checkboxValue, setCheckBoxChecked] = useState("");
-
-
-
-   
-
    
     const [correctAnswer, setCorrectAnswer] = useState({});
     const [answer, setAnswer] = useState({});
+    // react hook to get all c++ answers for specific question id
     useEffect(function () {
 
         const getAnswer = async function () {
             const res = await fetch("http://localhost:3001/answer/cPlusPlus/" + props.choiceQuestion._id, { credentials: "include" });
-
+   //wait for json data
             const data = await res.json();
+              //set variable to value of data
             setAnswer(data);
         }
         const getCorrectAnswer = async function () {
             const res = await fetch("http://localhost:3001/answer/cPlusPlus/correct/" + props.choiceQuestion._id, { credentials: "include" });
-
+   //wait for json data
             const data = await res.json();
+              //set variable to value of data
             setCorrectAnswer(data);
         }
         getAnswer();
@@ -52,12 +48,12 @@ function CPlusPlusQuestion(props) {
     const [disable, setDisable] = useState(false);
     const [test, settest] = useState("");
   
-
+//function that is called when visual component checkbox is clicked
     const changeColor = (e) => {
         let green = '#00FF00';
         let red = '#FF0000';
         
-    
+    //check if value of clicked checkbox is correct (true - green background, false - red background)
         if(e==correctAnswer.content){
           setBgColor(green);
         }
@@ -66,12 +62,12 @@ function CPlusPlusQuestion(props) {
           setBgColor(red);
           settest("    Napaka pravilni odgovor je: "+correctAnswer.content)
         }
-        
+        //disable checkbox
         setDisable(true);
       }
 
    
-
+//check if hook returned data
     if (answer.length > 0) {
       
      
