@@ -6,19 +6,24 @@ var questionController = require('../controllers/questionController.js');
  * GET
  */
 router.get('/', questionController.list);
-router.get('/html', questionController.listHtml);
-router.get('/css', questionController.listCss);
+
+
+router.get('/postQuestion', questionController.postQuestion);
 
 /*
  * GET
  */
 router.get('/:id', questionController.show);
 
+router.get('/q/:language/:difficulty', questionController.getQuestions);
+router.get('/q/:language', questionController.getAllQuestionsFromLanguage);
+
 /*
  * POST
  */
 router.post('/', questionController.create);
 
+router.post('/postQuestion', questionController.create);
 /*
  * PUT
  */

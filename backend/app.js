@@ -7,13 +7,14 @@ var logger = require('morgan');
 var mongoose = require("mongoose");
 var mongoDB = "mongodb://zlahtic:projekt@83.212.82.61:42957/projekt?authSource=admin";
 //var mongoDB = "mongodb://localhost:27017";
+//var mongoDB = "mongodb://127.0.0.1/projekt";
+
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var indexRouter = require('./routes/index');
-var answerRouter = require('./routes/answerRoutes');
 var questionRouter = require('./routes/questionRoutes');
 var app = express();
 
@@ -44,7 +45,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var session = require('express-session');
 var MongoStore = require('connect-mongo');
-const answerController = require('./controllers/answerController');
 app.use(session({
   secret: 'amigos',
   resave: true,
@@ -54,9 +54,6 @@ app.use(session({
 
 app.use('/', indexRouter);
 app.use('/question', questionRouter);
-app.use('/answer', answerRouter);
-
-
 
 
 
