@@ -109,10 +109,57 @@ module.exports = {
         });
     },
 
+    postQuestion: function (req, res) {
+    res.render('inputQuestion', { title: 'Vnos vprasanja' });
+    },
+
     show: function (req, res) {
         var id = req.params.id;
-
+        console.log(req.params);
         questionModel.findOne({_id: id}, function (err, question) {
+            if (err) {
+                return res.status(500).json({
+                    message: 'Error when getting question.',
+                    error: err
+                });
+            }
+
+            if (!question) {
+                return res.status(404).json({
+                    message: 'No such question'
+                });
+            }
+
+            return res.json(question);
+        });
+    },
+
+
+    getQuestions: function (req, res) {
+        var lang = req.params.language;
+        var diff = req.params.difficulty;
+        console.log(req.body.difficulty);
+        questionModel.find({difficulty: diff, language:lang}, function (err, question) {
+            if (err) {
+                return res.status(500).json({
+                    message: 'Error when getting question.',
+                    error: err
+                });
+            }
+
+            if (!question) {
+                return res.status(404).json({
+                    message: 'No such question'
+                });
+            }
+
+            return res.json(question);
+        });
+    },
+
+    getAllQuestionsFromLanguage: function (req, res) {
+        var lang = req.params.language;
+        questionModel.find({ language:lang}, function (err, question) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting question.',
@@ -134,7 +181,10 @@ module.exports = {
     create: function (req, res) {
         var question = new questionModel({
 			title : req.body.title,
-			content : req.body.content
+			content : req.body.content,
+            answer : req.body.answer,
+            language : req.body.language,
+            difficulty: req.body.difficulty
         });
 
         question.save(function (err, question) {
@@ -144,7 +194,7 @@ module.exports = {
                     error: err
                 });
             }
-
+            console.log(req.body);
             return res.status(201).json(question);
         });
     },

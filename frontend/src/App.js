@@ -1,4 +1,6 @@
 import './App.css';
+import './index.css';
+import Header from './components/Header/Header';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React, {useState} from "react";
 import {UserContext} from "./userContext";
@@ -12,6 +14,11 @@ import HomeSqlEasy from "./components/sql/HomeSqlEasy";
 import HomeSqlMedium from "./components/sql/HomeSqlMedium";
 import HomeSqlHard from "./components/sql/HomeSqlHard";
 import Navbar from "./components/sql/Navbar";
+import HomeJS from './components/javascript/js-home';
+import JSEasy from './components/javascript/js-easy';
+import JSMedium from './components/javascript/js-medium';
+import JSHard from './components/javascript/js-hard';
+import { routes } from './routes';
 
 function App() {
 
@@ -35,6 +42,10 @@ function App() {
                         <Route path={"/sql/Easy"} exact element={<HomeSqlEasy/>}></Route>
                         <Route path={"/sql/Medium"} exact element={<HomeSqlMedium/>}></Route>
                         <Route path={"/sql/Hard"} exact element={<HomeSqlHard/>}></Route>
+                        <Route path="/js" exact element={<HomeJS />}></Route>
+                        <Route path="/js/easy" exact element={<JSEasy />}></Route>
+                        <Route path="/js/medium" exact element={<JSMedium />}></Route>
+                        <Route path="/js/hard" exact element={<JSHard />}></Route>
                     </Routes>
                 </UserContext.Provider>
             </BrowserRouter>
