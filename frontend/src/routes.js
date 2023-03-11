@@ -8,6 +8,7 @@ import PythonHome from "./components/python/PythonHome";
 import PythonEasy from "./components/python/PythonEasy";
 import PythonMedium from "./components/python/PythonMedium";
 import PythonHard from "./components/python/PythonHard";
+import HomeSQL from "./components/sql/HomeSql"
 
 export const routes = [
     {name: "Domov", to: "/", visible: true, element: <Home/>},
@@ -25,5 +26,5 @@ export const routes = [
     {name: "PythonHard", to: "/Python/Hard", visible: false, element: <PythonHard/>},
     {name: "CSS", to: "/CSS", visible: true, element: <div>CSS</div>},
     {name: "HTML", to: "/HTML", visible: true, element: <div>HTML</div>},
-    {name: "SQL", to: "/SQL", visible: true, element: <div>SQL</div>}
+    {name: "SQL", to: "/sql", visible: true, element: <HomeSQL/>}
 ]
