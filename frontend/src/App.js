@@ -4,13 +4,9 @@ import Header from './components/Header/Header';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {useState} from "react";
 import {UserContext} from "./userContext";
-import Home from "./components/Home";
-import HomeCplusPlus from "./components/cPlusPlus/cPlusPlusHomepage";
-import HomeCplusPlusEasy from "./components/cPlusPlus/cPlusPlusEasy";
-import HomeCplusPlusMedium from "./components/cPlusPlus/cPlusPlusMedium";
-import HomeCplusPlusHard from "./components/cPlusPlus/cPlusPlusHard";
 
 import { routes } from './routes';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -25,16 +21,13 @@ function App() {
                 <BrowserRouter>
                 <Header/>
                     <UserContext.Provider value={{user: user, setUserContext: updateUserData}}>
-                        
+                        <main className='container'>
                         <Routes>  
                             {routes.map(route=><Route path={route.to} exact element={route.element}></Route>)}
-                            <Route path={"/"} exact element={<Home/>}></Route>
-                            <Route path={"/cPlusPlus"} exact element={<HomeCplusPlus/>}></Route>
-                            <Route path={"/cPlusPlus/Easy"} exact element={<HomeCplusPlusEasy/>}></Route>
-                            <Route path={"/cPlusPlus/Medium"} exact element={<HomeCplusPlusMedium/>}></Route>
-                            <Route path={"/cPlusPlus/Hard"} exact element={<HomeCplusPlusHard/>}></Route>
                         </Routes>
+                        </main>
                     </UserContext.Provider>
+                    <Footer/>
                 </BrowserRouter>
             </>
         );             
