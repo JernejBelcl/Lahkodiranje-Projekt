@@ -6,13 +6,13 @@ var questionController = require('../controllers/questionController.js');
  * GET
  */
 router.get('/', questionController.list);
-router.get('/sql/Easy/Short', questionController.listSqlEasyShort);
-router.get('/sql/Medium/Short', questionController.listSqlMediumShort);
-router.get('/sql/Hard/Short', questionController.listSqlHardShort);
+router.get('/cPlusPlus/Easy/Short', questionController.listCplusPlusEasyShort);
+router.get('/cPlusPlus/Medium/Short', questionController.listCplusPlusMediumShort);
+router.get('/cPlusPlus/Hard/Short', questionController.listCplusPlusHardShort);
 
-router.get('/sql/Easy/Choice', questionController.listSqlEasyChoice);
-router.get('/sql/Medium/Choice', questionController.listSqlMediumChoice);
-router.get('/sql/Hard/Choice', questionController.listSqlHardChoice);
+router.get('/cPlusPlus/Easy/Choice', questionController.listCplusPlusEasyChoice);
+router.get('/cPlusPlus/Medium/Choice', questionController.listCplusPlusMediumChoice);
+router.get('/cPlusPlus/Hard/Choice', questionController.listCplusPlusHardChoice);
 /*
  * GET
  */

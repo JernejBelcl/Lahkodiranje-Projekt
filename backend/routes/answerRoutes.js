@@ -6,13 +6,13 @@ var answerController = require('../controllers/answerController.js');
  * GET
  */
 router.get('/', answerController.list);
-router.get('/sql/lahki', answerController.list);
+router.get('/cPlusPlus/lahki', answerController.list);
 /*
  * GET
  */
 //router.get('/:id', answerController.show);
-router.get('/sql/:id', answerController.listSql);
-router.get('/sql/correct/:id', answerController.showSqlCorrect);
+router.get('/cPlusPlus/:id', answerController.listCplusPlus);
+router.get('/cPlusPlus/correct/:id', answerController.showCplusPlusCorrect);
 /*
  * POST
  */
