@@ -17,6 +17,10 @@ import HtmlHomepage from "./components/html/htmlHomepage";
 import HtmlEasyHomepage from "./components/html/htmlEasy/htmlEasyHomepage";
 import HtmlNormalHomepage from "./components/html/htmlNormal/htmlNormalHomepage";
 import HtmlHardHomepage from "./components/html/htmlHard/htmlHardHomepage";
+import CSharpHomepage from "./components/cSharp/cSharpHomepage";
+import CSharpEasy from "./components/cSharp/cSharpEasy";
+import CSharpMedium from "./components/cSharp/cSharpMedium";
+import CSharpHard from "./components/cSharp/cSharpHard";
 
 
 
@@ -29,7 +33,12 @@ export const routes = [
     {name: "C++", to: "/cPlusPlus/Medium", visible: false, element: <CPlusPlusMedium/>},
     {name: "C++", to: "/cPlusPlus/Hard", visible: false, element: <CPlusPlusHard/>},
 
-    {name: "C#", to: "/C#", visible: true, element: <div>C#</div>},
+    {name: "C#", to: "/CSharp", visible: true, element: <CSharpHomepage/>},
+    {name: "C#", to: "/CSharp/Easy", visible: false, element: <CSharpEasy/>},
+    {name: "C#", to: "/CSharp/Medium", visible: false, element: <CSharpMedium/>},
+    {name: "C#", to: "/CSharp/Hard", visible: false, element: <CSharpHard/>},
+
+
     {name: "JavaScript", to: "/js", visible: true, element: <HomeJS />},
     {name: "Python", to: "/Python", visible: true, element: <PythonHome/>},
     {name: "PythonEasy", to: "/Python/Easy", visible: false, element: <PythonEasy/>},
@@ -44,5 +53,5 @@ export const routes = [
     {name: "HTMLEasy", to: "/html/Easy", visible: false, element: <HtmlEasyHomepage/>},
     {name: "HTMLNormal", to: "/html/Normal", visible: false, element: <HtmlNormalHomepage/>},
     {name: "HTMLHard", to: "/html/Hard", visible: false, element: <HtmlHardHomepage/>},
-    {name: "SQL", to: "/SQL", visible: true, element: <div>SQL</div>}
+    //{name: "SQL", to: "/SQL", visible: true, element: <div>SQL</div>}
 ]
