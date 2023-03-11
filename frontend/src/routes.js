@@ -35,7 +35,7 @@ export const routes = [
     {name: "PythonEasy", to: "/Python/Easy", visible: false, element: <PythonEasy/>},
     {name: "PythonMedium", to: "/Python/Medium", visible: false, element: <PythonMedium/>},
     {name: "PythonHard", to: "/Python/Hard", visible: false, element: <PythonHard/>},
-    {name: "SQL", to: "/sql", visible: true, element: <HomeSQL/>}
+    {name: "SQL", to: "/sql", visible: true, element: <HomeSQL/>},
     {name: "CSS", to: "/CSS", visible: true, element: <CssHomepage/>},
     {name: "CSSEasy", to: "/CSS/Easy", visible: false, element: <CssEasyHomepage/>},
     {name: "CSSNormal", to: "/CSS/Normal", visible: false, element: <CssNormalHomepage/>},
