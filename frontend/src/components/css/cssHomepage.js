@@ -54,21 +54,21 @@ function CssHomepage() {
         <h1 class="display-4">Prikaz kode</h1>
         </div>
         <br></br>
-        <pre><code>&lt;!DOCTYPE html&gt;</code><br></br>
-        <code>&lt;html&gt;</code><br></br>
-        <code>{"<head>"}</code><br></br>
-        <code>{`<!-- Metapodatki... --> `}</code><br></br>
-        <code>{`<meta charset="UTF-8">`}</code><br></br>
-        <code>{`<title>Naslov strani</title>`}</code><br></br>
-        <code>{`</head>`}</code><br></br>
-        <code>{`<body>`}</code><br></br>
-        <code>{`<!-- Vsebina spletne strani... -->`}</code><br></br>
-        <code>{`</body>`}</code><br></br>
-        <code>{`</html>`}</code><br></br>
-        
-        
-
-        
+        <pre>
+        <code>{`<style>
+body {
+  background-color: white;
+} `}</code><br></br>
+        <code>{`div {
+  color: black;
+  text-align: center;
+}`}</code><br></br>
+        <code>{`p {
+  font-family: Times New Roman;
+  font-size: 50px;
+  color: grey;
+} 
+</style>}`}</code><br></br>        
         </pre>
         </div>
 
