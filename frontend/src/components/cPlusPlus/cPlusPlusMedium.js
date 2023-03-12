@@ -1,82 +1,72 @@
-import { useState } from "react";
-import { useEffect } from "react";
 import QuestionShort from './cPlusPlusQuestionShort';
 import QuestionChoice from './cPlusPlusQuestionChoice';
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    TableCaption,
-    TableContainer,
-} from '@chakra-ui/react'
-
-
-
-
+import { useState } from "react";
+import { useEffect } from "react";
+import { Helmet } from 'react-helmet';
+import { Box, Container, Stack, Text, Heading } from '@chakra-ui/react'
 
 function Questions() {
     const [choiceQuestion, setChoiceQuestion] = useState({});
     const [shortQuestion, setShortQuestion] = useState({});
-// react hook to get all c++ questions from database for difficulty medium and types choice/short
+
+    // react hook to get all c++ questions from database for difficulty medium and types choice/short
     useEffect(function () {
         const getChoiceQuestions = async function () {
             const res = await fetch("http://localhost:3001/question/cPlusPlus/Medium/Choice", { credentials: "include" });
-             //wait for json data
+            //wait for json data
             const data = await res.json();
-              //set variable to value of data
+            //set variable to value of data
             setChoiceQuestion(data);
         }
         const getShortQuestions = async function () {
             const res = await fetch("http://localhost:3001/question/cPlusPlus/Medium/Short", { credentials: "include" });
-             //wait for json data
+            //wait for json data
             const data = await res.json();
-              //set variable to value of data
+             //set variable to value of data
             setShortQuestion(data);
         }
-          //call for both functions
+        //call for both functions
         getChoiceQuestions();
         getShortQuestions();
     }, []);
 
-//check if both hook functions returned data
+    //check if both hook functions returned data
     if (choiceQuestion.length > 0 && shortQuestion.length > 0) {
         return (
             <>
+            {/*Naslov ki se izpiše v zavihku*/}
+            <Helmet>
+                <title> Srednji nivo </title>
+            </Helmet>
+            {/*Heading za srednji nivo */}
+            <Container maxW={'7xl'} py={5} as={Stack} spacing={12}>
+                    <Stack spacing={0} align={'center'}>
+                        <Heading color="#007CC7">C++ srednji nivo</Heading>
+                        <Text>Preizkusite svoje znanje C++</Text>
+                    </Stack>
+                    </Container>
 
-                <TableContainer>
+            {/*Povezan izpis vprašanj in danih odgovorov tipa multiple choice*/}
+            <Box
+                key={choiceQuestion._id}
+                p={4}
+                mb={4}
+                borderRadius="lg"
+                boxShadow="md"
+                bg="white"
+            >
+                    {choiceQuestion.map(
+                        choiceQuestion => (<QuestionChoice choiceQuestion={choiceQuestion} key={choiceQuestion._id} ></QuestionChoice>),
+                    )}
+            </Box>
 
-                    <Table variant='simple' size="lg">
-                        <TableCaption>Vsi uporabniki z dostopi</TableCaption>
-                        <Thead>
-                            <Tr >
-                                <Th>Vprašanja</Th>
-
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-
-
-                            {choiceQuestion.map(
-                                choiceQuestion => (<QuestionChoice choiceQuestion={choiceQuestion} key={choiceQuestion._id} ></QuestionChoice>),
-                            )}
-
-
-                            {shortQuestion.map(
-                                shortQuestion => (<QuestionShort shortQuestion={shortQuestion} key={shortQuestion._id} ></QuestionShort>),
-                            )}
-
-                        </Tbody>
-
-                    </Table>
-                </TableContainer></>
-
+            {/*Povezan izpis vprašanj tipa kratki odgovor*/}
+            {shortQuestion?.map(
+                shortQuestion => (<QuestionShort shortQuestion={shortQuestion} key={shortQuestion._id} ></QuestionShort>),
+            )}
+        </>
         )
     }
-
-
-
 }
 
 export default Questions;
