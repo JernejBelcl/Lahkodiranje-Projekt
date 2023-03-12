@@ -1,10 +1,10 @@
 import Navbar from "./Navbar";
-
+import Questions from "./SQLQuestionsEasy";
 function Easy() {
     return (
         <div>
             <Navbar></Navbar>
-            <h1>Lahko</h1><br></br> <br></br>
+            <Questions />
 
 
         </div>
