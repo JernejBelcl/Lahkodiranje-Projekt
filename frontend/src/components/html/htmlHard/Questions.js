@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Header from "./htmlHeader";
+import Header from "../htmlHeader";
 import { useContext, useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import Question from "./Question";
@@ -11,7 +11,7 @@ const Questions = () => {
 
     useEffect(() => {
         const getVprasanja = async function () {
-            const res = await fetch("http://localhost:3001/question/");
+            const res = await fetch("http://localhost:3001/question/html/hard");
             const data = await res.json();
             setVprasanja(data);
         }

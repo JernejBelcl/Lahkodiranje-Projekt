@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../htmlHeader";
 import { useContext, useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-import Questions from "../Questions";
+import Questions from "./Questions";
 
 function HtmlEasyQuestions() {
 
@@ -31,7 +31,7 @@ return (
       <div className="jumbotron my-auto">
       <h1 class="display-4">Vprašanja:</h1>
       </div>
-      </div>
+      </div><br></br>
       
       <Questions/> 
 

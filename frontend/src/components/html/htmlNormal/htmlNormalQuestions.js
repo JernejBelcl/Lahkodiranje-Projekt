@@ -2,22 +2,9 @@ import { Link } from "react-router-dom";
 import Header from "../htmlHeader";
 import { useContext, useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import Questions from "./Questions";
 
 function HtmlNormalQuestions() {
-    const [vprasanja, setVprasanja] = useState([]);
-    const [odgovor, setOdgovor] = useState("");
-    const [error, setError] = useState("");
-
-    useEffect(function () {
-        const getVprasanja = async function () {
-            const res = await fetch("http://83.212.82.61:42957/question/q/html/medium", { credentials: 'include' });
-            const data = await res.json();
-            setVprasanja(data);
-        }
-        getVprasanja()
-    }, []);
-
-
     return (
         <div>
         <Header title="HTML Course"></Header>
@@ -42,10 +29,9 @@ function HtmlNormalQuestions() {
         <h1 class="display-4">Vprašanja:</h1>
         </div>
 
+        </div><br></br>
 
-
-  
-        </div>
+        <Questions/>
 
         </div>        
     );
