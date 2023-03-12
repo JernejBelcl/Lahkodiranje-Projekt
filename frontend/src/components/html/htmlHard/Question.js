@@ -7,8 +7,8 @@ const Content = ({vprasanje, odgovor, index}) => {
     const [Odgovor, setOdgovor] = useState('Vnesi odgovor');
     const [isCorrect, setIsCorrect] =  useState(false);
     const handleClickSubmit = () => {
-        if(odgovor === Odgovor) alert('correct')
-        else alert('wrong')
+        if(odgovor === Odgovor) alert('PRAVILNO!')
+        else alert('NAPAČNO!')
        
     }
 
