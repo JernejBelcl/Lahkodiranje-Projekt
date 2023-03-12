@@ -1,23 +1,44 @@
 import { useState, useEffect } from "react";
+import {
+    Tr,
+    Td
 
+} from '@chakra-ui/react'
+import { Input ,Button} from '@chakra-ui/react'
 const Question = ({question, answer, index}) => {
+const green = '#00FF00';
+const red = '#FF0000';
 
-    const [userAnswer, setUserAnswer] = useState('Enter Answer');
-    const [isCorrect, setIsCorrect] =  useState(false);
-    const handleClickSubmit = () => {
-        if(answer === userAnswer) alert('correct')
-        else alert('wrong')
-       
-    }
+//set function for input
+const [input, setInput] = useState("");
+const [backgroundColor, setBackgroundColor] = useState('white');
+const [disable, setDisable] = useState(false);
+const handleButtonClick = () => {
 
+    //check if answer is correct
+    if(input === answer) setBackgroundColor(green)
+    else{
+        setBackgroundColor(red);
+        setInput(input+"   - Napaka, pravilni odgovor je: "+answer)
+      }
+
+    setDisable(true)
+}
     return (
-        <div style={{display: 'flex', flexFlow: 'column', width: '100%', backgroundColor: isCorrect ? 'green' : 'white'}}>
-            <h1>Question {index}: {question} </h1>
-            <div style={{display: 'flex', flexFlow: 'row'}}>
-                <input type='text' placeholder={userAnswer}  onChange={(e) => {setUserAnswer(e.target.value)}}/>
-                <button onClick={handleClickSubmit}>Submit</button>
-            </div>
-        </div>
+        <>
+        <Tr>
+
+            <Td>{question}</Td>
+
+        </Tr>
+
+      <Input placeholder='Vpiši odgovor' size='md' style={{ backgroundColor: backgroundColor}}  value={input} onInput={e => setInput(e.target.value)} disabled={disable} />
+
+     <br></br>
+      <Button  onClick={handleButtonClick}> preveri</Button>
+
+    </>
+      
     );
 }
 export default Question
