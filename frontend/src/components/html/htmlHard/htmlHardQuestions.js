@@ -23,7 +23,7 @@ function HtmlHardQuestions() {
         <Header title="HTML Course"></Header>
         <div className="container h-50 justify-content-center mt-5 text-color-secondary" style={{ width: "100%" }}>
         <div className="jumbotron my-auto">
-        <h1 class="display-2">HTML-Težavna Vprašanja</h1>
+        <h1 class="display-2">HTML-Zahtevna Vprašanja</h1>
         </div>
         <br></br>
 

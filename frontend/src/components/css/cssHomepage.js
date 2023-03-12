@@ -8,10 +8,10 @@ function CssHomepage() {
         <hr></hr> 
         <div class="d-inline p-2 text-green"><b>Vas mogoče bolje zanima HTML?</b></div><span>
         <Link to='/html'>
-        <button type="button" class="btn btn-success btn-sm">HTML-Tečaj</button></Link> </span>
+        <i class='fa fa-external-link fa-lg'></i></Link> </span>
         <hr></hr><br></br>  
         <Header title="CSS Course"></Header>
-        <br></br>
+    
         <div className="container h-50 justify-content-center mt-5 text-color-secondary" style={{ width: "100%" }}>
         <div className="jumbotron my-auto">
         <h1 class="display-2">Kaj je CSS?</h1>

@@ -17,3 +17,15 @@ code {
   height: inherit;
   width: inherit;
 }
+
+.green-color {
+  color:green;
+}
+
+.orange-color {
+  color:orange;
+  }
+  
+  .red-color {
+      color:red;
+  }

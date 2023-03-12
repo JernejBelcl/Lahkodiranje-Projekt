@@ -7,7 +7,7 @@ function CssHardCourse() {
         <Header title="CSS Course"></Header>
         <div className="container h-50 justify-content-center mt-5 text-color-secondary" style={{ width: "100%" }}>
         <div className="jumbotron my-auto">
-        <h1 class="display-2">CSS-Težki primeri</h1>
+        <h1 class="display-2">CSS-Zahtevni primeri</h1>
         </div>
         <br></br>
 
@@ -27,7 +27,7 @@ function CssHardCourse() {
         <p class="h4"><code><b>{`SELEKTOR {LASTNOST: VREDNOST;}`}</b></code></p>
 
         <br></br>
-        <p class="h2">Težavni ukazi:</p>
+        <p class="h2">Zahtevni ukazi:</p>
 
         <hr></hr>
         <pre>
