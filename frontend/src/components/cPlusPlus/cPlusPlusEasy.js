@@ -12,14 +12,14 @@ function Questions() {
     // react hook to get all c++ questions from database for difficulty easy and types choice/short
     useEffect(function () {
         const getChoiceQuestions = async function () {
-            const res = await fetch("http://localhost:3001/question/cPlusPlus/Easy/Choice", { credentials: "include" });
+            const res = await fetch("http://snf-60107.vm.okeanos-global.grnet.gr:3001/question/cPlusPlus/Easy/Choice", { credentials: "include" });
             //wait for json data
             const data = await res.json();
              //set variable to value of data
             setChoiceQuestion(data);
         }
         const getShortQuestions = async function () {
-            const res = await fetch("http://localhost:3001/question/cPlusPlus/Easy/Short", { credentials: "include" });
+            const res = await fetch("http://snf-60107.vm.okeanos-global.grnet.gr:3001/question/cPlusPlus/Easy/Short", { credentials: "include" });
             //wait for json data
             const data = await res.json();
             //set variable to value of data

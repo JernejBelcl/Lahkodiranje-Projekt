@@ -12,13 +12,13 @@ function CPlusPlusQuestion(props) {
     useEffect(function () {
 
         const getAnswer = async function () {
-            const res = await fetch("http://localhost:3001/answer/cPlusPlus/" + props.shortQuestion._id, { credentials: "include" });
+            const res = await fetch("http://snf-60107.vm.okeanos-global.grnet.gr:3001/answer/cPlusPlus/" + props.shortQuestion._id, { credentials: "include" });
 
             const data = await res.json();
             setAnswer(data);
         }
         const getCorrectAnswer = async function () {
-            const res = await fetch("http://localhost:3001/answer/cPlusPlus/correct/" + props.shortQuestion._id, { credentials: "include" });
+            const res = await fetch("http://snf-60107.vm.okeanos-global.grnet.gr:3001/answer/cPlusPlus/correct/" + props.shortQuestion._id, { credentials: "include" });
             // wait for json data
             const data = await res.json();
             // set variable to json data

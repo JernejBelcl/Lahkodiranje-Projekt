@@ -116,7 +116,7 @@ const Questions = () => {
 
     useEffect(() => {
         const fetchQuestions = async () => {
-            const response = await fetch('http://localhost:3001/question/sql/easy');
+            const response = await fetch('http://snf-60107.vm.okeanos-global.grnet.gr:3001/question/sql/easy');
             const data = await response.json();
             setQuestions(data);
             setIsCorrect(data.reduce((acc, q) => ({ ...acc, [q.id]: null }), {}));

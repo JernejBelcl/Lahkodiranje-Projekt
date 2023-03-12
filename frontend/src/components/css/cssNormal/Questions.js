@@ -11,7 +11,7 @@ const Questions = () => {
 
     useEffect(() => {
         const getVprasanja = async function () {
-            const res = await fetch("http://localhost:3001/question/css/medium");
+            const res = await fetch("http://snf-60107.vm.okeanos-global.grnet.gr:3001/question/css/medium");
             const data = await res.json();
             setVprasanja(data);
         }

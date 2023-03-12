@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var mongoose = require("mongoose");
 var mongoDB = "mongodb://zlahtic:projekt@83.212.82.61:42957/projekt?authSource=admin";
-//var mongoDB = "mongodb://localhost:27017";
+//var mongoDB = "mongodb://snf-60107.vm.okeanos-global.grnet.gr:27017";
 //var mongoDB = "mongodb://127.0.0.1/projekt";
 
 mongoose.connect(mongoDB);
@@ -20,7 +20,7 @@ var answerRouter = require('./routes/answerRoutes');
 var app = express();
 
 var cors = require('cors');
-var allowedOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+var allowedOrigins = ['http://snf-60107.vm.okeanos-global.grnet.gr:3000', 'http://snf-60107.vm.okeanos-global.grnet.gr:3001'];
 app.use(cors({
   credentials: true,
   origin: function(origin, callback){

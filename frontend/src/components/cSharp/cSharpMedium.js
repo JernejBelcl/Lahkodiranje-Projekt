@@ -6,7 +6,7 @@ function CSharpMedium() {
     const [answer, setAnswer] = useState();
     useEffect(() => {
         const getData = async function () {
-            const res = await fetch("http://localhost:3001/question/c%23/medium");
+            const res = await fetch("http://snf-60107.vm.okeanos-global.grnet.gr:3001/question/c%23/medium");
             const data = await res.json();
             setData(data);
         }
