@@ -197,6 +197,30 @@ module.exports = {
             res.status(500).json({message: 'Error when getting question.', error: err.message})
         }
     },
+    listPythonEasyChoice: async (req, res) => {
+        try {
+            const questions = await questionModel.find({difficulty: 'easy',language: 'python', type: 'fill'})
+            res.status(200).json(questions)
+        } catch(err){
+            res.status(500).json({message: 'Error when getting question.', error: err.message})
+        }
+    },
+    listPythonMediumChoice: async (req, res) => {
+        try {
+            const questions = await questionModel.find({difficulty: 'medium',language: 'python', type: 'fill'})
+            res.status(200).json(questions)
+        } catch(err){
+            res.status(500).json({message: 'Error when getting question.', error: err.message})
+        }
+    },
+    listPythonHardChoice: async (req, res) => {
+        try {
+            const questions = await questionModel.find({difficulty: 'hard',language: 'python', type: 'fill'})
+            res.status(200).json(questions)
+        } catch(err){
+            res.status(500).json({message: 'Error when getting question.', error: err.message})
+        }
+    },
 
     postQuestion: function (req, res) {
     res.render('inputQuestion', { title: 'Vnos vprasanja' });

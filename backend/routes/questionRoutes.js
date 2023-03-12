@@ -21,12 +21,20 @@ router.get('/cPlusPlus/Medium/Choice', questionController.listCplusPlusMediumCho
 router.get('/cPlusPlus/Hard/Choice', questionController.listCplusPlusHardChoice);
 
 /*
- routes to get javascript questions that are type choice for all difficulties
- */
- router.get('/JavaScript/Easy/Choice', questionController.listJavaScriptEasyChoice);
- router.get('/JavaScript/Medium/Choice', questionController.listJavaScriptMediumChoice);
- router.get('/JavaScript/Hard/Choice', questionController.listJavaScriptHardChoice);
- 
+routes to get javascript questions that are type choice for all difficulties
+*/
+router.get('/JavaScript/Easy/Choice', questionController.listJavaScriptEasyChoice);
+router.get('/JavaScript/Medium/Choice', questionController.listJavaScriptMediumChoice);
+router.get('/JavaScript/Hard/Choice', questionController.listJavaScriptHardChoice);
+
+/*
+routes to get python questions that are type choice for all difficulties
+*/
+router.get('/Python/Easy/Choice', questionController.listPythonEasyChoice);
+router.get('/Python/Medium/Choice', questionController.listPythonMediumChoice);
+router.get('/Python/Hard/Choice', questionController.listPythonHardChoice);
+
+
  
 
 
