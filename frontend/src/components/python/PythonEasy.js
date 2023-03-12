@@ -14,7 +14,7 @@ const PythonEasy = () => {
     const [answer, setAnswer] = useState();
     useEffect(() => {
      const getData = async function () {
-            const res = await fetch("http://localhost:3001/question/"); // todo: change api call
+            const res = await fetch("http://localhost:3001/question/Python/Easy/Choice"); // todo: change api call
             const data = await res.json();
             setData(data);
         } 
@@ -27,7 +27,6 @@ const PythonEasy = () => {
         <TableContainer>
 
         <Table variant='simple' size="lg">
-            <TableCaption>Loading</TableCaption>
             <Thead>
                 <Tr >
                     <Th>Vprašanja</Th>
