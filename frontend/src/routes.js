@@ -40,6 +40,10 @@ import CSharpHard from "./components/cSharp/cSharpHard";
 import HomeSqlEasy from "./components/sql/HomeSqlEasy";
 import HomeSqlMedium from "./components/sql/HomeSqlMedium";
 import HomeSqlHard from "./components/sql/HomeSqlHard";
+import JSEasy from "./components/javascript/js-easy";
+import JSMedium from "./components/javascript/js-medium";
+import JSHard from "./components/javascript/js-hard";
+
 export const routes = [
     {name: "Domov", to: "/", visible: true, element: <Home/>},
     
@@ -53,8 +57,11 @@ export const routes = [
     {name: "C#", to: "/CSharp/Medium", visible: false, element: <CSharpMedium/>},
     {name: "C#", to: "/CSharp/Hard", visible: false, element: <CSharpHard/>},
 
-
     {name: "JavaScript", to: "/js", visible: true, element: <HomeJS />},
+    {name: "JavaScript", to: "/js/easy", visible: false, element: <JSEasy />},
+    {name: "JavaScript", to: "/js/medium", visible: false, element: <JSMedium />},
+    {name: "JavaScript", to: "/js/hard", visible: false, element: <JSHard />},
+
     {name: "Python", to: "/Python", visible: true, element: <PythonHome/>},
     {name: "PythonEasy", to: "/Python/Easy", visible: false, element: <PythonEasy/>},
     {name: "PythonMedium", to: "/Python/Medium", visible: false, element: <PythonMedium/>},
