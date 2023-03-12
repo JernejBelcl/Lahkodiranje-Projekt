@@ -35,7 +35,7 @@ const handleButtonClick = () => {
       <Input placeholder='Vpiši odgovor' size='md' style={{ backgroundColor: backgroundColor}}  value={input} onInput={e => setInput(e.target.value)} disabled={disable} />
 
      <br></br>
-      <Button  onClick={handleButtonClick}> preveri</Button>
+      <Button  onClick={handleButtonClick} disabled={disable}> preveri</Button>
 
     </>
       
