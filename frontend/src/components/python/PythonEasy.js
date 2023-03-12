@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
 import Question from "./Question";
-
+import {
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    TableCaption,
+    TableContainer,
+} from '@chakra-ui/react'
 const PythonEasy = () => {
     const [data, setData] = useState([]);
     const [answer, setAnswer] = useState();
@@ -12,10 +20,29 @@ const PythonEasy = () => {
         } 
         getData();   
     }, []);
+
     return (
-        data.map((question, index) =>
+
+
+        <TableContainer>
+
+        <Table variant='simple' size="lg">
+            <TableCaption>Loading</TableCaption>
+            <Thead>
+                <Tr >
+                    <Th>Vprašanja</Th>
+
+                </Tr>
+            </Thead>
+            <Tbody>
+            {data.map((question, index) =>
         <Question key={index} question={question.content} answer={question.answer} index={index} />
-      ) 
+        )}
+
+            </Tbody>
+
+        </Table>
+    </TableContainer>
     );
 }
 export default PythonEasy
