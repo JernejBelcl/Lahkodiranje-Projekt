@@ -6,7 +6,7 @@ function CSharpEasy() {
     const [answer, setAnswer] = useState();
     useEffect(() => {
         const getData = async function () {
-            const res = await fetch("http://localhost:3001/question/q/sql/easy"); // todo: change sql to c#
+            const res = await fetch("http://localhost:3001/question/c%23/easy");
             const data = await res.json();
             setData(data);
         }
