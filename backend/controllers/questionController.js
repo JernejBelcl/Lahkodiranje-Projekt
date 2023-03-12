@@ -173,6 +173,30 @@ module.exports = {
             return res.json(questions);
         });
     },
+    listJavaScriptEasyChoice: async (req, res) => {
+        try {
+            const questions = await questionModel.find({difficulty: 'easy',language: 'js', type: 'fill'})
+            res.status(200).json(questions)
+        } catch(err){
+            res.status(500).json({message: 'Error when getting question.', error: err.message})
+        }
+    },
+    listJavaScriptMediumChoice: async (req, res) => {
+        try {
+            const questions = await questionModel.find({difficulty: 'medium',language: 'js', type: 'fill'})
+            res.status(200).json(questions)
+        } catch(err){
+            res.status(500).json({message: 'Error when getting question.', error: err.message})
+        }
+    },
+    listJavaScriptHardChoice: async (req, res) => {
+        try {
+            const questions = await questionModel.find({difficulty: 'hard',language: 'js', type: 'fill'})
+            res.status(200).json(questions)
+        } catch(err){
+            res.status(500).json({message: 'Error when getting question.', error: err.message})
+        }
+    },
 
     postQuestion: function (req, res) {
     res.render('inputQuestion', { title: 'Vnos vprasanja' });
